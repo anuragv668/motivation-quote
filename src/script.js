@@ -12,6 +12,9 @@ const quoteGetter = () => {
     .then(data => {
       setter(data.quote)
     })
+    .catch(() => {
+      setter("You Lack Discipline")
+    }) 
 }
 
-setter(quoteGetter(url));
+quoteGetter();
